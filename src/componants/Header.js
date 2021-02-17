@@ -5,11 +5,8 @@ export default function Header(props) {
     <header className="row block center">
       <div>
         <a href="#">
-          <h1>Small Shopping Cart</h1>
+          <h1>Exemple Site E-commerce</h1>
         </a>
-      </div>
-      <div>
-        <a href="#/cart">Cart</a> <a href="#/signin">SignIn</a>
       </div>
     </header>
   );

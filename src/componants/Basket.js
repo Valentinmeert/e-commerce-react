@@ -1,4 +1,4 @@
-/* import React from "react";
+import React from "react";
 
 export default function Basket(props) {
   const { cartItems, onAdd, onRemove } = props;
@@ -13,7 +13,7 @@ export default function Basket(props) {
         {cartItems.length === 0 && <div>Cart is empty</div>}
         {cartItems.map((item) => (
           <div key={item.id} className="row">
-            <div className="col-2">{item.name}</div>
+            <div className="col-2">{item.title}</div>
             <div className="col-2">
               <button onClick={() => onRemove(item)} className="remove">
                 -
@@ -24,7 +24,7 @@ export default function Basket(props) {
             </div>
 
             <div className="col-2 text-right">
-              {item.qty} x ${item.price.toFixed(2)}
+              {item.qty} x {item.price.toFixed(2)}€
             </div>
           </div>
         ))}
@@ -34,16 +34,16 @@ export default function Basket(props) {
             <hr></hr>
             <div className="row">
               <div className="col-2">Items Price</div>
-              <div className="col-1 text-right">${itemsPrice.toFixed(2)}</div>
+              <div className="col-1 text-right">{itemsPrice.toFixed(2)}€</div>
             </div>
             <div className="row">
               <div className="col-2">Tax Price</div>
-              <div className="col-1 text-right">${taxPrice.toFixed(2)}</div>
+              <div className="col-1 text-right">{taxPrice.toFixed(2)}€</div>
             </div>
             <div className="row">
               <div className="col-2">Shipping Price</div>
               <div className="col-1 text-right">
-                ${shippingPrice.toFixed(2)}
+                {shippingPrice.toFixed(2)}€
               </div>
             </div>
 
@@ -52,7 +52,7 @@ export default function Basket(props) {
                 <strong>Total Price</strong>
               </div>
               <div className="col-1 text-right">
-                <strong>${totalPrice.toFixed(2)}</strong>
+                <strong>{totalPrice.toFixed(2)} €</strong>
               </div>
             </div>
             <hr />
@@ -67,4 +67,3 @@ export default function Basket(props) {
     </aside>
   );
 }
- */
